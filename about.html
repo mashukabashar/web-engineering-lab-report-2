@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me | Mashuka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero-section">
+    <div class="hero-overlay">
+      <div class="logo-container">
+        <p><img src="Letter-M-logo-design-logo-mark-brand-identity-branding-by-Aditya-Chhatrala.png" alt="logo"> Mashuka 5146</p>
+      </div>
+      <div class="header-title">
+        <h1>About Me</h1>
+        <p class="header-subtitle">Mashuka Bashar Chowdhury<br>Student at Daffodil International University</p>
+      </div>
+    </div>
+
+    <div class="nav-toggle" onclick="toggleNav()">&#9776; <span class="toggle-text">Menu</span></div>
+    <nav class="nav-dropdown" id="navDropdown">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">My Portfolio</a>
+    </nav>
+  </header>
+
+  <section class="section about">
+    <div class="section-content">
+      <h2>Who Am I?</h2>
+      <p>I'm a passionate and curious CSE student who believes in the power of knowledge and simplicity. My journey in technology is driven by exploration, creativity, and a desire to contribute to society with meaningful innovations.</p>
+
+      <h3>Core Beliefs</h3>
+      <ul class="list">
+        <li>✨ Simplicity and sincerity are strengths</li>
+        <li>📚 Continuous learning is my fuel</li>
+        <li>❤️ Empathy and honesty make us human</li>
+        <li>🌍 Dreaming big, staying grounded</li>
+      </ul>
+
+      <h3>Personal Traits</h3>
+      <p>Quiet, introspective, honest, and loyal. I care deeply about the people around me and always strive to improve myself while helping others grow.</p>
+    </div>
+  </section>
+
+  <footer class="footer-box">
+    <p>&copy; 2025 Mashuka Bashar Chowdhury. All rights reserved.</p>
+    <p>Contact: chowdhury15-5146@diu.edu.bd</p>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      const menu = document.getElementById('navDropdown');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
