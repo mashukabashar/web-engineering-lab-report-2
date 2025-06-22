@@ -2,35 +2,234 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mashuka | Home</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background: #fefefe;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('360_F_844712853_ZsKKbJfSGUoxa0tIUtFX2C0VG5BS9cM1.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 60px 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .hero-overlay {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      height: 50px;
+    }
+
+    .brand-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .nav-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .nav-dropdown {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+      z-index: 9999;
+    }
+
+    .nav-dropdown.active {
+      transform: translateY(0);
+    }
+
+    .nav-dropdown a {
+      color: #fff;
+      font-size: 2em;
+      text-decoration: none;
+      margin: 20px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-dropdown a:hover {
+      color: #ffcc00;
+    }
+
+    .header-title {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .header-title h1 {
+      font-size: 2.5em;
+    }
+
+    .header-subtitle {
+      font-size: 1.1em;
+      margin-top: 10px;
+      color: #ddd;
+    }
+
+    .soft-divider {
+      border: none;
+      border-top: 2px solid #eee;
+      margin: 40px auto;
+      width: 80%;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section h1, .section h2 {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .list {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .list li {
+      padding: 5px 0;
+    }
+
+    .interest-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-box img {
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .text-box {
+      max-width: 500px;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 16px;
+      background-color:rgb(88, 92, 95);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .button-link:hover {
+      background-color:rgb(88, 92, 95);
+    }
+
+    .featured-work .dual {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-box {
+      text-align: center;
+      padding: 100px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 2em;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      
+      .close-btn:hover {
+        color: #ffcc00;
+      }
+      
+  </style>
 </head>
 <body>
 
   <header class="hero-section">
     <div class="hero-overlay">
-      <div class="logo-container">
-        <p><img src="Letter-M-logo-design-logo-mark-brand-identity-branding-by-Aditya-Chhatrala.png" alt="logo"> Mashuka 5146</p>
+      <div class="top-bar">
+        <div class="logo-container">
+          <img src="Letter-M-logo-design-logo-mark-brand-identity-branding-by-Aditya-Chhatrala.png" alt="logo">
+          <p class="brand-text">Mashuka 5146</p>
+        </div>
+        <div class="nav-toggle" onclick="toggleNav()">&#9776; <span class="toggle-text">Menu</span></div>
       </div>
+
       <div class="header-title">
         <h1>Mashuka Bashar Chowdhury</h1>
         <p class="header-subtitle">Student at Daffodil International University<br>Department of Computer Science and Engineering</p>
       </div>
     </div>
-
-
-    <div class="nav-toggle" onclick="toggleNav()">&#9776; <span class="toggle-text">Menu</span></div>
-    <nav class="nav-dropdown" id="navDropdown">
-        <a href="about.html">About Me</a>
-        <a href="portfolio.html">My Portfolio</a>
-      </nav>
-
-
   </header>
 
-  
 
+  <nav class="nav-dropdown" id="navDropdown">
+    <button class="close-btn" onclick="toggleNav()">✕</button>
 
+    <a href="about.html">About Me</a>
+    <a href="portfolio.html">My Portfolio</a>
+  </nav>
 
   <hr class="soft-divider">
 
@@ -64,7 +263,7 @@
         <li>Digital Branding</li>
       </ul>
       <a href="portfolio.html" class="button-link">
-        <span class="arrow-icon">&#10132;</span> Check my projects
+        <span class="arrow-icon">➠</span> Check my projects
       </a>
     </div>
   </section>
@@ -94,7 +293,7 @@
   <script>
     function toggleNav() {
       const menu = document.getElementById('navDropdown');
-      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+      menu.classList.toggle('active');
     }
   </script>
 

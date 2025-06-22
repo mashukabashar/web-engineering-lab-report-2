@@ -2,8 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Mashuka</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif;
+      background: #fefefe;
+      color: #333;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('background.jpg') no-repeat center center/cover;
+      color: white;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .logo-container img {
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    .logo-container p {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-title h1 {
+      font-size: 2.5em;
+      margin: 20px 0 10px;
+    }
+
+    .header-subtitle {
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    .nav-toggle {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .nav-dropdown {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background: #000;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .nav-dropdown a {
+      color: white;
+      font-size: 2em;
+      text-decoration: none;
+      margin: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-dropdown a:hover {
+      color: #ffcc00;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2em;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .close-btn:hover {
+      color: #ffcc00;
+    }
+
+    .section.project-list {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .section p, .section ul {
+      margin-bottom: 25px;
+    }
+
+    .list {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .list li {
+      padding: 15px 0;
+    }
+
+    .list a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .list a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-box {
+      text-align: center;
+      padding: 100px;
+      background: #333;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,11 +157,11 @@
         <p class="header-subtitle">A Glimpse of My Works</p>
       </div>
     </div>
-
     <div class="nav-toggle" onclick="toggleNav()">&#9776; <span class="toggle-text">Menu</span></div>
     <nav class="nav-dropdown" id="navDropdown">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
+      <button class="close-btn" onclick="toggleNav()">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
     </nav>
   </header>
 
@@ -33,13 +173,13 @@
       <ul class="list">
         <li>
           <strong>Biodata System</strong><br>
-          A personal biodata form and print system using HTML, CSS, PHP, and MySQL.  
-          <br><a href="biodata.html" target="_blank">View Biodata</a>
+          A personal biodata form and print system using HTML, CSS, PHP, and MySQL.<br>
+          <a href="biodata.html" target="_blank">View Biodata</a>
         </li>
         <li>
           <strong>Simple Calculator</strong><br>
-          A basic calculator using HTML, CSS, and JavaScript.  
-          <br><a href="calculator.html" target="_blank">View Calculator Project</a>
+          A basic calculator using HTML, CSS, and JavaScript.<br>
+          <a href="calculator.html" target="_blank">View Calculator Project</a>
         </li>
       </ul>
     </div>
@@ -53,7 +193,11 @@
   <script>
     function toggleNav() {
       const menu = document.getElementById('navDropdown');
-      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
     }
   </script>
 </body>
