@@ -4,62 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me | Mashuka</title>
-  
+
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Times New Roman', Times, serif;
       background: #fefefe;
       color: #333;
+      line-height: 1.6;
     }
 
     .hero-section {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('background.jpg') no-repeat center center/cover;
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('360_F_844712853_ZsKKbJfSGUoxa0tIUtFX2C0VG5BS9cM1.jpg') no-repeat center center/cover;
       color: white;
       min-height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      position: relative;
-      padding: 40px 20px;
       text-align: center;
+      padding: 80px 20px 60px;
     }
 
-    .logo-container img {
-      height: 50px;
-      vertical-align: middle;
+    .hero-top-bar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
     }
 
-    .logo-container p {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #fff;
+    .logo-container {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .header-title h1 {
-      font-size: 2.5em;
-      margin: 20px 0 10px;
+    .logo-container img {
+      height: 45px;
     }
 
-    .header-subtitle {
-      font-size: 1.1em;
-      color: #ddd;
+    .logo-container p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
     }
 
     .nav-toggle {
-      position: absolute;
-      top: 20px;
-      right: 30px;
       font-size: 1.5em;
       cursor: pointer;
       color: white;
       background: rgba(0, 0, 0, 0.4);
-      padding: 10px;
-      border-radius: 5px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-toggle:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .header-title h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      color: #ffdd99;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .header-subtitle {
+      font-size: 1.2em;
+      color: #ddd;
     }
 
     .nav-dropdown {
@@ -88,71 +112,109 @@
       color: #ffcc00;
     }
 
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2em;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close-btn:hover {
+      color: #ffcc00;
+    }
+
     .section.about {
       padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
-    .section h2, .section h3 {
-      color: #444;
-      margin-bottom: 15px;
+    .section-content h2, .section-content h3 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    .section p, .section ul {
+    .section-content p {
+      font-size: 1.1rem;
       margin-bottom: 25px;
+      text-align: justify;
+      padding: 0 10px;
     }
 
     .list {
       list-style: none;
-      padding-left: 20px;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
     .list li {
-      padding: 5px 0;
+      background: #f9f9f9;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .list li:hover {
+      background: #e0e0e0;
+      transform: scale(1.05);
     }
 
     .footer-box {
       text-align: center;
-      padding: 100px;
+      padding: 60px 20px;
       background: #333;
       color: white;
+      margin-top: 60px;
     }
 
-    .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 30px;
+    @media (max-width: 768px) {
+      .header-title h1 {
         font-size: 2em;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        transition: color 0.3s ease;
-      }
-      
-      .close-btn:hover {
-        color: #ffcc00;
       }
 
+      .section-content {
+        padding: 0 10px;
+      }
+
+      .nav-dropdown a {
+        font-size: 1.5em;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <header class="hero-section">
-    <div class="hero-overlay">
+    <div class="hero-top-bar">
       <div class="logo-container">
-        <p><img src="Letter-M-logo-design-logo-mark-brand-identity-branding-by-Aditya-Chhatrala.png" alt="logo"> Mashuka 5146</p>
+        <img src="Letter-M-logo-design-logo-mark-brand-identity-branding-by-Aditya-Chhatrala.png" alt="logo">
+        <p>Mashuka 5146</p>
       </div>
-      <div class="header-title">
-        <h1>About Me</h1>
-        <p class="header-subtitle">Mashuka Bashar Chowdhury<br>Student at Daffodil International University</p>
-      </div>
+      <div class="nav-toggle" onclick="toggleNav()">☰ Menu</div>
     </div>
-    <div class="nav-toggle" onclick="toggleNav()">&#9776; <span class="toggle-text">Menu</span></div>
+
+    <div class="header-title">
+      <h1>About Me</h1>
+      <p class="header-subtitle">Mashuka Bashar Chowdhury<br>Student at Daffodil International University</p>
+    </div>
 
     <nav class="nav-dropdown" id="navDropdown">
-        <button class="close-btn" onclick="toggleNav()">✕</button>
+      <button class="close-btn" onclick="toggleNav()">✕</button>
       <a href="index.html">Home</a>
       <a href="portfolio.html">My Portfolio</a>
     </nav>
@@ -191,5 +253,6 @@
       }
     }
   </script>
+
 </body>
 </html>

@@ -201,6 +201,140 @@
       .close-btn:hover {
         color: #ffcc00;
       }
+
+      .section {
+        padding: 60px 20px;
+        max-width: 1100px;
+        margin: auto;
+      }
+      
+      .section h1, .section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #2c3e50;
+        text-align: center;
+      }
+      
+      .section p {
+        font-size: 1.1rem;
+        text-align: center;
+        color: #555;
+      }
+      
+      .list {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      
+      .list li {
+        background: #f8f8f8;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+      }
+      
+      .list li:hover {
+        transform: scale(1.05);
+        background: #e0e0e0;
+      }
+      
+      .interest-area {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+      }
+      
+      .image-box img {
+        width: 280px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      }
+      
+      .text-box {
+        max-width: 550px;
+        text-align: center;
+      }
+      
+      .text-box h2 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin-bottom: 15px;
+      }
+      
+      .text-box .tag {
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+      
+      .button-link {
+        margin-top: 25px;
+        padding: 12px 20px;
+        background-color: #2c3e50;
+        color: #fff;
+        border-radius: 25px;
+        font-size: 1rem;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+      
+      .button-link:hover {
+        background-color: #1abc9c;
+        transform: scale(1.05);
+      }
+      
+      .featured-work .dual {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: flex-start;
+        margin-top: 40px;
+      }
+      
+      .left-pane h2 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+      }
+      
+      .left-pane p {
+        color: #777;
+      }
+      
+      .right-pane ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .right-pane li {
+        margin-bottom: 15px;
+      }
+      
+      .right-pane a {
+        text-decoration: none;
+        color: #3498db;
+        font-size: 1.1rem;
+        transition: color 0.3s ease, font-weight 0.3s ease;
+      }
+      
+      .right-pane a:hover {
+        color: #1abc9c;
+        font-weight: bold;
+      }
+      
       
   </style>
 </head>
@@ -238,19 +372,19 @@
       <h1>My Hobbies</h1>
       <p>I enjoy diverse activities that keep me mindful and creative:</p>
       <ul class="list">
-        <li>🧘 Practicing mindfulness and meditation</li>
-        <li>🍳 Cooking traditional and fusion dishes</li>
-        <li>📷 Aesthetic photography and nature shoots</li>
-        <li>✍️ Writing journals and personal reflections</li>
+        <li>🧘 Mindfulness & Meditation</li>
+        <li>🍳 Cooking Creative Dishes</li>
+        <li>📷 Aesthetic Photography</li>
+        <li>✍️ Journaling & Reflections</li>
       </ul>
     </div>
   </section>
-
+  
   <hr class="soft-divider">
-
+  
   <section class="section interest-area">
     <div class="image-box">
-      <img src="images.jpeg" alt="My Logo">
+      <img src="images.jpeg" alt="Interest Area">
     </div>
     <div class="text-box">
       <h4 class="tag">Fields I'm Passionate About</h4>
@@ -263,27 +397,28 @@
         <li>Digital Branding</li>
       </ul>
       <a href="portfolio.html" class="button-link">
-        <span class="arrow-icon">➠</span> Check my projects
+        ➠ Check My Projects
       </a>
     </div>
   </section>
-
+  
   <hr class="soft-divider">
-
+  
   <section class="section featured-work">
     <div class="section-content dual">
       <div class="left-pane">
         <h2>Featured Projects</h2>
-        <p>Built using HTML, CSS, JS, PHP, and MySQL</p>
+        <p>Built using HTML, CSS, JavaScript, PHP, and MySQL</p>
       </div>
       <div class="right-pane">
         <ul>
           <li><a href="biodata.html" target="_blank">Biodata</a></li>
-          <li><a href="calculator.html" target="_blank">Calculator</a></li>
+          <li><a href="calculator.html" target="_blank">Simple Calculator</a></li>
         </ul>
       </div>
     </div>
   </section>
+  
 
   <footer class="footer-box">
     <p>&copy; 2025 Mashuka Bashar Chowdhury. All rights reserved.</p>
