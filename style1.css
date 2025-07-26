@@ -1,0 +1,134 @@
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    }
+    .container {
+    display: flex;
+    height: 100vh;
+    }
+    .left {
+    flex: 1;
+    background: url('images/O1CN01DPJ2Zm1OovHYg26mu_!!6000000001753-0-tps-1532-2296.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+    padding: 40px;
+    }
+    .testimonial {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    max-width: 400px;
+    }
+.testimonial p {
+font-size: 18px;
+margin-bottom: 10px;
+}
+.testimonial small {
+font-size: 14px;
+color: #ccc;
+}
+.right {
+flex: 1;
+background-color: #fff;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 40px;
+}
+.right h2 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+.location {
+margin-bottom: 20px;
+font-size: 14px;
+color: #444;
+}
+.social-btn {
+width: 100%;
+max-width: 350px;
+margin-bottom: 10px;
+padding: 12px;
+font-size: 16px;
+border: 1px solid #ccc;
+background-color: white;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+.divider {
+margin: 20px 0;
+text-align: center;
+color: #999;
+position: relative;
+}
+.divider::before,
+.divider::after {
+content: "";
+height: 1px;
+width: 45%;
+background: #ccc;
+position: absolute;
+top: 50%;
+}
+.divider::before {
+left: 0;
+}
+.divider::after {
+right: 0;
+}
+input[type="email"] {
+width: 100%;
+max-width: 350px;
+padding: 12px;
+font-size: 16px;
+border: 1px solid #ccc;
+margin-bottom: 20px;
+}
+.create-btn {
+width: 100%;
+max-width: 350px;
+padding: 12px;
+background-color: orange;
+border: none;
+font-size: 16px;
+cursor: pointer;
+color: #000;
+}
+    .signin {
+    margin-top: 20px;
+    font-size: 14px;
+    }
+    .signin a {
+    color: #000;
+    text-decoration: underline;
+    }
+    .left img{
+    width: 10rem;
+    }
+    .testimonial img{
+    width: 2rem;
+    }
+    .social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    margin: 8px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    }
+    .social-btn i {
+    font-size: 20px;
+    }
+    
